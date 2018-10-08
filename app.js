@@ -6,25 +6,20 @@ var cookieParser = require('cookie-parser');
 
 app.set('view engine','ejs')
 app.use(cookieParser());
-app.use(session({
-  secret: 'keyboard cat',
-  resave: false,
-  saveUninitialized: true,
-  cookie: { secure: true }
-}))
+app.use(session({secret: 'hello'}));
 
 app.get('/', (req, res) => res.render('index'));
 
 app.get('/hi', function(req, res) {
-  res.render('signup')
   req.session.user = 'hello';
+  res.render('signup')
   console.log(req.session);
 })
 
 
 
 app.get('/anything', function(req, res) {
-  res.redirect('/hi');
+  res.redirect('/hi')
   console.log(req.session);
 })
 
