@@ -1,17 +1,21 @@
 const Browser = require('zombie');
+// var url = "http://localhost:3000";
+// var browser = new Browser();
 
-Browser.localhost('example.com', 3000)
+// Browser.proxy = 'http://localhost:3000'
+//
+Browser.localhost('localhost', 3000)
 
 describe('User visits homepage', function(){
   const browser = new Browser();
 
-  before(function(done) {
+  beforeEach(function(done) {
     browser.visit('/',done);
   });
 
   describe('is a homepage', function(){
-    it('should have the hi makers text',function(){
-      browser.assert.text('title','hi makers')
+    it('should have the greetings text',function(){
+      browser.assert.text('h1','MakersAirbnb')
     });
   });
 });
