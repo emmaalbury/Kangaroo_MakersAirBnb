@@ -18,6 +18,7 @@
     "mongodb": "^3.1.7"
   },
   "devDependencies": {
+    "jasmine": "latest",
     "zombie": "^6.1.3"
   }
 }
