@@ -1,10 +1,9 @@
-var validation = require('../src/validation');
+// var validation = require('/src/validation');
 
 describe('Validation', function () {
-  var validate;
 
   beforeEach(function() {
-    validate = new validation();
+    validate = new Validation();
   });
 
   it("should return true", function() {

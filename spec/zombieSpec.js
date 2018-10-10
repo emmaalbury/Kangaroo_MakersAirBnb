@@ -1,9 +1,5 @@
 const Browser = require('zombie');
-// var url = "http://localhost:3000";
-// var browser = new Browser();
 
-// Browser.proxy = 'http://localhost:3000'
-//
 Browser.localhost('localhost', 3000)
 
 describe('User visits homepage', function(){

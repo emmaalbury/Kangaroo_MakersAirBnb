@@ -1,3 +1,5 @@
+
+
 Validation = function() {
 
 }
@@ -18,4 +20,4 @@ Validation.prototype.authenticateUser = function(user, password) {
     }
   }
 
-  module.exports = Validation;
+exports = Validation;
