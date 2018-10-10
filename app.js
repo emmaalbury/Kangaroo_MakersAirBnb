@@ -13,11 +13,11 @@ app.use(session({secret: 'hello'}));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.get('/', (req, res) => res.render('index', {name: req.session.user, email: req.session.email}));
+app.get('/', (req, res) => res.render('index', {name: req.session.username, email: req.session.userID}));
 
 app.get('/hi', function(req, res) {
   req.session.user = 'sophie';
-  res.render('signup')  //render apparently needs to be after you set a session
+  res.render('signup')
 })
 
 
@@ -28,7 +28,11 @@ app.get('/anything', function(req, res) {
 
 app.post('/signup', function(req, res) {
   console.log(req.body);
-  console.log(validation.authenticateUser(req.body.name, req.body.email));
+  console.log(validation.authenticateUser(req.body.name, req.body.email))
+  if (validation.authenticateUser(req.body.name, req.body.email)); {
+    req.session.username = req.body.name
+    req.session.userID = req.body.email
+  }
   res.redirect('/')
 })
 
