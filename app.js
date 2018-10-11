@@ -18,9 +18,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 mongoose.connect('mongodb://localhost/27017');
 
 
-app.get('/', (req, res) => res.render('index', {name: req.session.username,
-                                                password: req.session.password,
-                                                login: req.session.login}));
+app.get('/', (req, res) => res.render('index',{name: req.session.username,
+                                              password: req.session.password,
+                                              login: req.session.login}));
 
 app.get('/registration', function(req, res) {
   res.render('registration')  //render apparently needs to be after you set a session
@@ -36,6 +36,16 @@ app.post('/registration',function(req,res){
   req.session.password = req.body.password
   res.redirect('/')
 })
+
+
+app.get('/spaces', function(req, res) {
+  res.render('spaces')  //render apparently needs to be after you set a session
+})
+
+app.post('/spaces', function(req, res) {
+  res.send('hi')
+})
+
 
 
 app.post('/login',function(req,res){
@@ -59,11 +69,11 @@ app.post('/login',function(req,res){
   });
 })
 
-
-
-app.get('/anything', function(req, res) {
-  res.send(req.session.user)
-})
+//
+//
+// app.get('/anything', function(req, res) {
+//   res.send(req.session.user)
+// })
 
 
   //   User.find({username: 'decent host'}).exec(function (err, users) {
