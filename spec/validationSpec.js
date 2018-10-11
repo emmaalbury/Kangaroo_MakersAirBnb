@@ -1,6 +1,6 @@
-describe ("Validation", function () {
-  var validate
+// var validation = require('/src/validation');
 
+describe('Validation', function () {
 
   beforeEach(function() {
     validate = new Validation();
