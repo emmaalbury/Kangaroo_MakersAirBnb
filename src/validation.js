@@ -1,6 +1,14 @@
-// function Validation() {
-//
-// }
+function Validation() {
+
+}
+Validation.prototype.authenticateUser = function(user, password) {
+  if (user === 'makers' && password === 'password') {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 
 // var finduser = require('finduser')
 // const find = require('./username')

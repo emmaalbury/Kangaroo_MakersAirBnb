@@ -49,7 +49,7 @@ app.post('/login',function(req,res){
       req.session.username = req.body.username
       req.session.password = req.body.password
       req.session.login = ""
-      res.redirect('/spaces')
+      res.redirect('/')
     } else {
       req.session.username = ""
       req.session.password = ""
