@@ -1,6 +1,14 @@
 <html>
   <h1>MakersAirbnb</h1>
 
+  <%= login %>
   <%= name %>
-  <%= email %>
+  <%= password %>
+  <form class="" action="/login" method="post">
+    Login:
+    <input type="text" name="username">
+    <input type="text" name="password">
+    <input type="submit" name="login" value="login">
+
+  </form>
 </html>
