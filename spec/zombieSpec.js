@@ -14,4 +14,12 @@ describe('User visits homepage', function(){
       browser.assert.text('h1','MakersAirbnb')
     });
   });
+
+    describe('is a homepage', function(){
+      it('should have a registration link',function(){
+        browser.pressButton('Registration');
+        browser.assert.url('http://localhost/Registration');
+      });
+    });
+
 });
