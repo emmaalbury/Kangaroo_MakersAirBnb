@@ -16,10 +16,11 @@
     "ejs": "^1.0.0",
     "express": "^4.16.3",
     "express-session": "^1.15.6",
-    "mongodb": "^3.1.7"
+    "mongodb": "^3.1.7",
+    "mongoose": "^5.3.2"
   },
   "devDependencies": {
-    "jasmine": "latest",
+    "jasmine": "^3.2.0",
     "zombie": "^6.1.3"
   }
 }

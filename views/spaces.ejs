@@ -1,0 +1,13 @@
+<h1>All Makers AirBnb spaces </h1>
+<ul>
+  <% for(var i = 0; i < spaces.length; i++) { %>
+    <li> <%= spaces[i].space_name %>,
+    <%= spaces[i].space_description %>,
+    <%= spaces[i].space_address %>,
+    £<%= spaces[i].space_price %>
+    </li>
+  <% }%>
+</ul>
+<form action="/addspace" method="get">
+  <button id="addspace">Add your space</button>
+</form>

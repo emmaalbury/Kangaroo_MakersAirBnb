@@ -3,6 +3,7 @@ const app = express()
 const port = 3000
 const User = require('./users')
 const mongoose = require('mongoose');
+const Spaces = require('./src/spaceSchema')
 var session = require('express-session');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
@@ -39,14 +40,20 @@ app.post('/registration',function(req,res){
 
 
 app.get('/spaces', function(req, res) {
-  res.render('spaces')  //render apparently needs to be after you set a session
+  Spaces.find({}, function(err, docs) {
+    console.log(docs);
+    res.render('spaces', {spaces: docs})
+  })
 })
 
 app.post('/spaces', function(req, res) {
-  res.send('hi')
+  Spaces.create(req.body)
+  res.redirect('/spaces')
 })
 
-
+app.get('/addspace', function(req, res) {
+  res.render('addspace')
+})
 
 app.post('/login',function(req,res){
   User.findOne({username: req.body.username},function(err,user) {
