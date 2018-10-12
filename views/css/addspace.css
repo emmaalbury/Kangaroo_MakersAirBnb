@@ -1,0 +1,17 @@
+h1 {
+  font-family: monospace;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 25px;
+}
+
+body {
+  background-color: linen;
+}
+
+#addspaceform {
+  font-family: monospace;
+  margin-left: 75px;
+  font-size: 20px;
+}
