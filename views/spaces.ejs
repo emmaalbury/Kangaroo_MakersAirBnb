@@ -1,13 +1,35 @@
-<h1>All Makers AirBnb spaces </h1>
-<ul>
-  <% for(var i = 0; i < spaces.length; i++) { %>
-    <li> <%= spaces[i].space_name %>,
-    <%= spaces[i].space_description %>,
-    <%= spaces[i].space_address %>,
-    £<%= spaces[i].space_price %>
-    </li>
-  <% }%>
-</ul>
-<form action="/addspace" method="get">
-  <button id="addspace">Add your space</button>
-</form>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/spaces.css" type="text/css">
+  </head>
+  <body class='bg'>
+
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">MakersAirbnb</a>
+      <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+
+    </nav>
+
+
+    <h1>All Makers AirBnb spaces</h1>
+    <form class="addspacebutton" action="/addspace" method="get">
+      <button id="addspace" class="btn btn-outline-success">+</button>
+    </form>
+      <% for(var i = 0; i < spaces.length; i++) { %>
+        <div><span class="spaces-name"><%= spaces[i].space_name %></span><br>
+          <small><%= spaces[i].space_address %></small><br><br>
+        Description: <p><%= spaces[i].space_description %></p>
+        £<%= spaces[i].space_price %> per night
+      </div>
+      <% }%>
+    </ul>
+    <footer>made by team Kangaroo</footer>
+  </body>
+</html>
