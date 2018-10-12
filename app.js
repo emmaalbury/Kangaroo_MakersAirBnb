@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const port = 3000
-const User = require('./users')
+const User = require('./src/users')
 const mongoose = require('mongoose');
 const Spaces = require('./src/spaceSchema')
 var session = require('express-session');
@@ -16,7 +16,13 @@ app.use(session({secret: 'hello'}));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-mongoose.connect('mongodb://localhost/27017');
+var dbUriTest = process.env.MONGO_URL || 'mongodb://localhost/testing'
+var dbTest = mongoose.connect(dbUriTest);
+
+var dbUri = process.env.MONDO_URL || 'mongodb://localhost/27017'
+var db = mongoose.connect(dbUri);
+
+// mongoose.connect('mongodb://localhost/27017');
 
 
 app.get('/', (req, res) => res.render('index',{name: req.session.username,
@@ -24,7 +30,7 @@ app.get('/', (req, res) => res.render('index',{name: req.session.username,
                                               login: req.session.login}));
 
 app.get('/registration', function(req, res) {
-  res.render('registration')  //render apparently needs to be after you set a session
+  res.render('registration', {wrong: req.session.username})  //render apparently needs to be after you set a session
 })
 
 
@@ -35,7 +41,16 @@ app.post('/registration',function(req,res){
   })
   req.session.username = req.body.username
   req.session.password = req.body.password
-  res.redirect('/')
+
+  User.findOne({username: req.body.username},function(err, user) {
+    if (user != null) {
+      req.session.username = "Username already exists"
+      res.redirect('/registration')
+    }
+    else {
+      res.redirect('/spaces')
+    }
+  })
 })
 
 

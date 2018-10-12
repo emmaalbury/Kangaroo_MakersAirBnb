@@ -1,5 +1,3 @@
-
-
 Validation = function() {
 
 }
@@ -12,4 +10,3 @@ Validation.prototype.authenticateUser = function(user, password) {
   }
 }
 exports = Validation;
-

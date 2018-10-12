@@ -16,6 +16,7 @@
     "ejs": "^1.0.0",
     "express": "^4.16.3",
     "express-session": "^1.15.6",
+    "mongo-test-db": "^0.3.3",
     "mongodb": "^3.1.7",
     "mongoose": "^5.3.2"
   },

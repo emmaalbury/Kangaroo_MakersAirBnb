@@ -20,7 +20,7 @@ describe('User visits Registration page', function(){
         browser.fill('username', 'reallygreatuser')
         browser.fill('password', 'password66')
         browser.pressButton('Register')
-        browser.assert.url('http://localhost/spaces');
+        browser.assert.url('http://localhost/registration');
       });
     });
 });
