@@ -76,18 +76,6 @@ app.post('/login',function(req,res){
   });
 })
 
-//
-//
-// app.get('/anything', function(req, res) {
-//   res.send(req.session.user)
-// })
-
-
-  //   User.find({username: 'decent host'}).exec(function (err, users) {
-  //
-  // })
-
-
 
 app.use(express.static('public'))
 
