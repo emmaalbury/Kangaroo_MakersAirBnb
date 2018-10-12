@@ -29,6 +29,18 @@ body {
   border-radius: 20px;
 }
 
+#BnBTent {
+  border-radius: 50%;
+}
+
+#BnbBali {
+  border-radius: 50%;
+}
+
+#BnBCopenhagen {
+  border-radius: 50%;
+}
+
 .column {
   float: left;
   width: 33.33%;
