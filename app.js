@@ -20,9 +20,7 @@ app.use(express.static(__dirname + '/views'));
 mongoose.connect('mongodb://localhost/27017');
 
 
-app.get('/', (req, res) => res.render('index',{name: req.session.username,
-                                              password: req.session.password,
-                                              login: req.session.login}));
+app.get('/', (req, res) => res.render('index',{session: req.session}));
 
 app.get('/registration', function(req, res) {
   res.render('registration')  //render apparently needs to be after you set a session
