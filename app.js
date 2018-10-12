@@ -15,6 +15,7 @@ app.use(cookieParser());
 app.use(session({secret: 'hello'}));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static(__dirname + '/views'));
 
 mongoose.connect('mongodb://localhost/27017');
 
