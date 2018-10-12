@@ -8,11 +8,12 @@
 </head>
 <body>
 
-  <h1>MakersAirbnb</h1>
+  <h1>Makersbnb</h1>
   <%= login %>
   <%= name %>
   <%= password %>
-  <form class="" action="/login" method="post">
+
+  <form id="login_form" action="/login" method="post">
     Login:
     <input type="text" name="username">
     <input type="text" name="password">
@@ -20,14 +21,15 @@
   </form>
 
   <br><br>
-  <form action="/Registration" method="get">
-    Need to Register?
+  <form id="registrationform" action="/Registration" method="get">
+    Don't have an account? Register here
     <input type="submit" name="Registration" value="Registration">
   </form>
+  <br>
+  <br>
 
-<span id="span-carousel">
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
+<div id="carouselExampleControls" class="carousel slide container" data-ride="carousel">
+  <div class="carousel">
     <div class="carousel-item active">
       <img class="d-block w-100" src="https://media.timeout.com/images/104101847/1372/772/image.jpg" alt="First slide">
     </div>
@@ -47,7 +49,7 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-</span>
+
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
