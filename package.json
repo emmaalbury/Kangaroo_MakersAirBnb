@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jasmine",
-    "test-features": "zombie"
+    "test-features": "zombie",
   },
   "author": "",
   "license": "ISC",

@@ -16,14 +16,13 @@ app.use(session({secret: 'hello'}));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-var dbUriTest = process.env.MONGO_URL || 'mongodb://localhost/testing'
-var dbTest = mongoose.connect(dbUriTest);
+// var dbUriTest = process.env.MONGO_URL || 'mongodb://localhost/testing'
+// var dbTest = mongoose.connect(dbUriTest);
+//
+// var dbUri = process.env.MONDO_URL || 'mongodb://localhost/27017'
+// var db = mongoose.connect(dbUri);
 
-var dbUri = process.env.MONDO_URL || 'mongodb://localhost/27017'
-var db = mongoose.connect(dbUri);
-
-// mongoose.connect('mongodb://localhost/27017');
-
+mongoose.connect('mongodb://localhost/27017');
 
 app.get('/', (req, res) => res.render('index',{name: req.session.username,
                                               password: req.session.password,
