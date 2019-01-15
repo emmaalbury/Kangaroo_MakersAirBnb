@@ -34,7 +34,7 @@ node index.js
 Front End: Node.js \
 Backend: MongoDB, Mongoose \
 Testing: Jasmine, Zombie \
-Styling: HTML, CSS \
+Styling: HTML, CSS
 
 
 ## User Stories:
