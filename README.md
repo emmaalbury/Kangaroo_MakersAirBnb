@@ -1,6 +1,6 @@
 # Kangaroo Makers AirBnB
 
-An AirBnB style web application created by a team of four over two weeks. 
+An AirBnB style web application created by a team of four Makers students over two weeks. 
 
 ## Instructions for Use:
 
