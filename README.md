@@ -23,7 +23,7 @@ In the command line
 mongod
 
 - In a new terminal window: \
-node kangaroo.js
+node app.js
 
 - Open localhost:3000 in your web browser
 
