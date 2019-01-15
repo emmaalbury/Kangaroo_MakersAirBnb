@@ -10,7 +10,8 @@ In the command line
  https://github.com/emmaalbury/Kangaroo_MakersAirBnb
 
 - Install MongoDB: \
- https://www.mongodb.com/download-center/community
+ https://www.mongodb.com/download-center/community \
+ https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
 
 - Install Node: \
  brew install node
@@ -18,14 +19,11 @@ In the command line
 - Install dependencies: \
  npm install
 
-- Set up test database: \
-node testDatabaseSetup.js
-
 - Run MongoDB server: \
 mongod
 
 - In a new terminal window: \
-node index.js
+node kangaroo.js
 
 - Open localhost:3000 in your web browser
 
