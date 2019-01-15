@@ -27,6 +27,11 @@ node app.js
 
 - Open localhost:3000 in your web browser
 
+## To Run Tests:
+
+- Enter in the command line: \
+npm test
+
 ## Technologies Used:
 
 Front End: Node.js \
